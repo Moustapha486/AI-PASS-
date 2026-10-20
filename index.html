@@ -173,7 +173,8 @@ footer{text-align:center;font-size:13px;padding:30px 20px 110px}
 var PAY_LINK="https://link.saspay.me/mfzo49qtvog";            // lien de paiement FedaPay / KkiaPay / Systeme.io
 var WA_GROUP="#";           // lien du groupe WhatsApp
 var WA_SUPPORT="#";         // lien WhatsApp support (https://wa.me/229XXXXXXXX)
-document.getElementById("grp").href=WA_GROUP;document.getElementById("sup").href=WA_SUPPORT;
+var g=document.getElementById("grp");if(g)g.href=WA_GROUP;
+var s=document.getElementById("sup");if(s)s.href=WA_SUPPORT;
 
 var ov=document.getElementById("ov");
 document.querySelectorAll("[data-buy]").forEach(function(b){b.onclick=function(){if(PAY_LINK){location.href=PAY_LINK}else{ov.classList.add("on")}}});
